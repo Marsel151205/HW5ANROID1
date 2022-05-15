@@ -14,7 +14,7 @@ import com.example.android1splashscreenandgame.adapters.NameAdapter;
 import com.example.android1splashscreenandgame.data.NameData;
 import com.example.android1splashscreenandgame.data.models.NameModel;
 import com.example.android1splashscreenandgame.databinding.ActivityMainBinding;
-import com.example.android1splashscreenandgame.interf.OnItemClickListener;
+import com.example.android1splashscreenandgame.interf.  OnItemClickListener;
 
 import java.util.ArrayList;
 

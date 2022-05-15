@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android1splashscreenandgame.R;
 import com.example.android1splashscreenandgame.data.models.NameModel;
+import com.example.android1splashscreenandgame.databinding.ActivityInfoBinding;
 import com.example.android1splashscreenandgame.databinding.ListNameHolderBinding;
 import com.example.android1splashscreenandgame.interf.OnItemClickListener;
 
@@ -23,7 +24,6 @@ public class NameAdapter extends RecyclerView.Adapter<NameAdapter.NameHolder> {
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
     }
-
 
     @NonNull
     @Override
@@ -48,15 +48,21 @@ public class NameAdapter extends RecyclerView.Adapter<NameAdapter.NameHolder> {
 
     public class NameHolder extends RecyclerView.ViewHolder {
         private ListNameHolderBinding binding;
+        private ActivityInfoBinding infoBinding;
 
         public NameHolder(@NonNull ListNameHolderBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }
+
+        public NameHolder(ActivityInfoBinding infoBinding) {
+            super(infoBinding.getRoot());
+        }
+
         public void onBind(NameModel nameModel) {
             binding.tvName.setText(nameModel.getName());
             binding.tvNumber.setText(nameModel.getNumber());
-            binding.imAvatar.setImageResource(nameModel.getImage());
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

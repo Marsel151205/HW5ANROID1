@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 
 import com.example.android1splashscreenandgame.data.models.NameModel;
 import com.example.android1splashscreenandgame.databinding.ActivityInfoBinding;
@@ -22,5 +23,6 @@ public class InfoActivity extends AppCompatActivity {
         nameModel = (NameModel) intent.getSerializableExtra("key");
         binding.tvAddress.setText(nameModel.getAddress());
         binding.tvName.setText(nameModel.getName());
+        binding.tvAddress.setMovementMethod(new ScrollingMovementMethod());
     }
 }

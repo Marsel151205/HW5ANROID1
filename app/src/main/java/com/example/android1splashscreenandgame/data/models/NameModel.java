@@ -5,15 +5,14 @@ import java.io.Serializable;
 public class NameModel implements Serializable {
     private String name;
     private String number;
-    private int image;
-    String address;
+    private String address;
+    private String description;
 
-
-    public NameModel(String name, String number, int image,String address) {
+    public NameModel(String name, String number, String address) {
         this.name = name;
         this.number = number;
-        this.image = image;
         this.address = address;
+        this.description = description;
     }
 
     public String getName() {
@@ -24,11 +23,11 @@ public class NameModel implements Serializable {
         return number;
     }
 
-    public int getImage() {
-        return image;
-    }
     public String getAddress() {
         return address;
     }
 
+    public String getDescription() {
+        return description;
+    }
 }

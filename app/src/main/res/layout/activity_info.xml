@@ -4,24 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B69D51"
     android:orientation="vertical"
     tools:context=".InfoActivity">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/teal_200"
+        android:textSize="50sp"
+        tools:text="@tools:sample/first_names" />
 
     <TextView
         android:id="@+id/tv_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="vertical"
         android:textColor="@color/black"
         android:textSize="25sp"
         tools:text="@tools:sample/first_names" />
-
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        tools:text="@tools:sample/first_names" />
-
 
 </LinearLayout>
